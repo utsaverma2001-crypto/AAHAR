@@ -1,12 +1,23 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+require('dotenv').config();
 // const bodyParser = require('body-parser');
-const connectDB = require('./config/db');
+// const connectDB = require('./config/db');
 const path = require('path');
 
 app.use(express.json({ extended: false }));
-connectDB();
+const mongoose = require('mongoose');
+const db =process.env.MONGO_URL;
+mongoose.connect(db, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+    })
+console.log('MongoDB connected to ...');
+
+
 
 app.use(cors());
 app.use("/admin",require('./Routes/food'));

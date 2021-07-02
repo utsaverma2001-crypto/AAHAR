@@ -16,6 +16,7 @@ router.get('/orders', auth, async (req, res) => {
 router.get('/userorder', auth, async (req, res) => {
   try {
     const result = await Order.find({ user: req.user.id });
+    console.log(result);
     res.json(result);
   } catch (error) {
     console.error(error.message);
@@ -26,10 +27,11 @@ router.get('/userorder', auth, async (req, res) => {
 router.post('/orders', auth, async (req, res) => {
   try {
     const user = req.user.id;
+    console.log(req.body);
     const order = new Order({
       user,
-      orders: req.body.cart,
-      totalPrice: req.body.total,
+      orders: req.body,
+      totalPrice: req.body.price * req.body.quantity,
     });
     await order.save();
     res.json('sahi ja rahe h');
@@ -42,10 +44,8 @@ router.post('/orders', auth, async (req, res) => {
 
 router.get('/orderplaced', auth, async (req, res) => {
   try {
-    const pendingOrders = await Order.find({ isOpen: true }).populate(
-      'user',
-      'name branch'
-    );
+    const pendingOrders = await Order.find({ isOpen: true });
+    console.log(pendingOrders);
     res.json(pendingOrders);
   } catch (error) {
     console.error(error.message);

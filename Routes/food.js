@@ -28,7 +28,7 @@ router.post(
     }
 
     try {
-      const { foodItem, name, price } = req.body;
+      const { foodItem, name, price} = req.body;
 
       // const food = {
       //   foodItem,
@@ -48,10 +48,10 @@ router.post(
       const food = new Food({
         foodItem,
         name,
-        price
-       // image: req.file.path,
+        price,
+        image:req.file.path,
       });
-      console.log(food);
+     // console.log(req.file.path);
       await food.save();
       res.status(200).send(food);
     } catch (error) {

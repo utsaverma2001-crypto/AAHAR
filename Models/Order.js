@@ -10,6 +10,9 @@ const OrderSchema = new mongoose.Schema({
         type: String,
         required: true,
       },
+      image:{
+        type: String,
+      },
       name: {
         type: String,
         required: true,

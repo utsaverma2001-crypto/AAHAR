@@ -1,19 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Logout } from '../../actions/auth';
 const NavBar = ({ auth: { user, isAuthenticated }, totalQuantity, Logout }) => {
+//  console.log(isAuthenticated);
   return (
     <div>
-      {user ? (
+      {isAuthenticated ?( user ? (
         user.name === 'admin' ? (
           <div className="admin_nav">
             <Link to="/admin" className="link">
               Admin
             </Link>
-            <Link className="link" onClick={() => Logout()}>
-              <i classname="fa fa-sign-out"></i>Logout
-            </Link>
+            <button className="link" onClick={() => Logout()}>
+              <i className="fa fa-sign-out"></i>Logout
+            </button>
             <Link className="link" to="/orderplaced">
               Orders Placed
             </Link>
@@ -23,9 +24,9 @@ const NavBar = ({ auth: { user, isAuthenticated }, totalQuantity, Logout }) => {
             <Link to="/history" className="link">
               History
             </Link>
-            <Link className="link" onClick={() => Logout()}>
-              <i classname="fas fa-sign-out"></i>Logout
-            </Link>
+            <button className="link" onClick={() => Logout()}>
+              <i className="fas fa-sign-out"></i>Logout
+            </button>
             <Link to="/orders" className="link">
               <i className="fas fa-shopping-cart"> {totalQuantity}</i>
             </Link>
@@ -33,7 +34,7 @@ const NavBar = ({ auth: { user, isAuthenticated }, totalQuantity, Logout }) => {
         )
       ) : (
         ''
-      )}
+      )):(<Redirect to="/signin" />)}
     </div>
   );
 };

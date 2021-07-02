@@ -682,7 +682,14 @@ button {
   color: #ffffff;
   border: none;
 }
-
+.ord {
+  padding: 4px 6px;
+  font-size: 15px;
+  font-weight: bold;
+  background: #ecc134;
+  color: #ffffff;
+  border: none;
+}
 .remove {
   padding: 4px 6px;
   font-size: 15px;

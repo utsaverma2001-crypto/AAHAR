@@ -34,7 +34,7 @@ const Admin = ({ AddFood, admin }) => {
     <div>
       <div className="admin">
         <div className="admin_card">
-          <form onSubmit={onSubmit} className="admin_form">
+          <form onSubmit={onSubmit} className="admin_form" >
             <h2>Admin only</h2>
             <h3>Add food Item</h3>
             <label>Enter your option</label>

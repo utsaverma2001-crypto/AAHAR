@@ -21,6 +21,7 @@ const SignIn = ({ signin, isAuthenticated }) => {
     signin({ email, password });
   };
   if (isAuthenticated) {
+    console.log(isAuthenticated);
     return <Redirect to="/" />;
   }
 
@@ -56,7 +57,7 @@ const SignIn = ({ signin, isAuthenticated }) => {
             <br />
 
             <button type="submit">Submit</button>
-            <h4 class="done">Don't have an account ?</h4>
+            <h4 className="done">Don't have an account ?</h4>
             <Link to="/signup">Create one</Link>
           </form>
         </div>

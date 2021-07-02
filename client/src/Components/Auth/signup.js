@@ -25,6 +25,7 @@ const SignUp = ({ signup, isAuthenticated }) => {
   };
 
   if (isAuthenticated) {
+    console.log(isAuthenticated);
     return <Redirect to="/" />;
   }
   return (

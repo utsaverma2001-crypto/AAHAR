@@ -5,7 +5,7 @@ import {
   clearItemFromCart,
   removeFromCart,
   AddToCart,
-  PostHistory,
+  PostHistory
 } from '../../actions/cart';
 import { getCartTotal } from '../../Utils/cart';
 import StripeButton from '../pAYMENT/payment';
@@ -16,7 +16,7 @@ const Orders = ({
   AddToCart,
   removeFromCart,
   clearItemFromCart,
-  PostHistory,
+  PostHistory
 }) => {
   const total = getCartTotal(cart);
   const history = useHistory();
@@ -56,35 +56,44 @@ const Orders = ({
             <th>Increase</th>
             <th>Decrease</th>
             <th>Clear Cart</th>
+            <th>Order</th>
           </tr>
           {cart.map((cartItem) => {
             return (
               <tr className="content_table">
-                <th>{cartItem.foodItem}</th>
-                <th>{cartItem.name}</th>
-                <th>{cartItem.price}</th>
-                <th>{cartItem.quantity}</th>
-                <th>
+                <td>{cartItem.foodItem}</td>
+                <td>{cartItem.name}</td>
+                <td>{cartItem.price}</td>
+                <td>{cartItem.quantity}</td>
+                <td>
                   <button className="add" onClick={() => AddToCart(cartItem)}>
                     +
                   </button>
-                </th>
-                <th>
+                </td>
+                <td>
                   <button
                     className="remove"
                     onClick={() => removeFromCart(cartItem)}
                   >
                     -
                   </button>
-                </th>
-                <th>
+                </td>
+                <td>
                   <button
                     className="clear"
                     onClick={() => clearItemFromCart(cartItem._id)}
                   >
                     x
                   </button>
-                </th>
+                </td>
+                <td>
+                  <button
+                    className="ord"
+                    onClick={() => PostHistory(cartItem)}
+                  >
+                    📱
+                  </button>
+                </td>
               </tr>
             );
           })}

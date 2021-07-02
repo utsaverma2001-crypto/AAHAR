@@ -7,7 +7,6 @@ const History = ({ auth: { user }, GetHistory, history: { history } }) => {
   useState(() => {
     GetHistory();
   }, [GetHistory]);
-
   return (
     <div className="history">
       <div className="personal_data">

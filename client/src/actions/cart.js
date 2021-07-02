@@ -25,6 +25,7 @@ export const removeFromCart = (item) => ({
 export const PostHistory = (formData) => async (dispatch) => {
   try {
     const res = await axios.post('/admin/orders', formData);
+   // console.log(formData);
     dispatch({
       type: POST_HISTORY,
       payload: res.data,

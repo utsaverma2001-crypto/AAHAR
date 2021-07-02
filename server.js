@@ -14,8 +14,10 @@ mongoose.connect(db, {
       useUnifiedTopology: true,
       useCreateIndex: true,
       useFindAndModify: false,
+    }).then(()=>{
+      console.log('MongoDB connected to ...');
     })
-console.log('MongoDB connected to ...');
+
 
 
 

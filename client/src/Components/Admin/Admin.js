@@ -48,9 +48,9 @@ const Admin = ({ AddFood, admin }) => {
               <option value="null">Select your option</option>
 
               <option value="breakfast">Breakfast</option>
-              <option value="chinese">Chinese</option>
-              <option value="indian">Indian</option>
-              <option value="chat">Chat</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+              {/* <option value="chat">Chat</option> */}
             </select>
             <br />
             <label>Enter Name of food Item</label>

@@ -32,17 +32,20 @@ const History = ({ auth: { user }, GetHistory, history: { history } }) => {
             {history.length > 0 ? (
               history.map((order) => (
                 <div className="order_box">
+               
                   {order.orders.map((ord) => (
                     <div>
-                      <h2>FoodItem: {ord.foodItem}</h2>
+                      <h3>FoodItem: {ord.foodItem}</h3>
                       <h3>Name: {ord.name}</h3>
                       <h3>Price: {ord.price}</h3>
+                      <h3>Quantity: {ord.quantity}</h3>
                     </div>
                   ))}
-                  <h2>
+                  <h4>
                     Date: <Moment date={order.date} />
-                  </h2>
+                  </h4>
                   <h1>Total Price: {order.totalPrice}</h1>
+                  {!order.isOpen?(<h2>Order is Ready!!</h2>):(<h2>Order is in processing</h2>)}
                 </div>
               ))
             ) : (

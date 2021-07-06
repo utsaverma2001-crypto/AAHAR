@@ -23,7 +23,7 @@ mongoose.connect(db, {
 
 app.use(cors());
 app.use("/admin",require('./Routes/food'));
-app.use("/admin",require('./Routes/order'));
+app.use(require('./Routes/order'));
 app.use(require('./Routes/auth'));
 
 

@@ -4,6 +4,14 @@ const OrderSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user',
   },
+  username:{
+    type:String,
+    
+  },
+  branch:{
+    type:String,
+   
+  },
   orders: [
     {
       foodItem: {

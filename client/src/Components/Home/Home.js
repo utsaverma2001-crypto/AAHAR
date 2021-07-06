@@ -8,7 +8,7 @@ const Home = ({ GetAllSelectedItems }) => {
     <div className="home-h">
         <Navbar />
         <div className="content">
-          <h1>Canteen</h1>
+          <h1>AAHAR</h1>
           <h3>Eat Good Feel Good</h3>
         </div>
       
@@ -40,8 +40,8 @@ const Home = ({ GetAllSelectedItems }) => {
               View More
             </Link>
           </div>
-          <div className="variety chinese">
-            <h2>Chinese</h2>
+          <div className="variety lunch">
+            <h2>Lunch</h2>
             <p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -56,14 +56,14 @@ const Home = ({ GetAllSelectedItems }) => {
 
             <Link
               className="button"
-              onClick={() => GetAllSelectedItems("chinese")}
-              to="/chinese"
+              onClick={() => GetAllSelectedItems("lunch")}
+              to="/lunch"
             >
               View More
             </Link>
           </div>
-          <div className="variety indian">
-            <h2>Indian</h2>
+          <div className="variety dinner">
+            <h2>Dinner</h2>
             <p>
               <svg
                 id="Capa_1"
@@ -80,13 +80,13 @@ const Home = ({ GetAllSelectedItems }) => {
             </p>
             <Link
               className="button"
-              to="/indian"
-              onClick={() => GetAllSelectedItems("indian")}
+              to="/dinner"
+              onClick={() => GetAllSelectedItems("dinner")}
             >
               View More
             </Link>
           </div>
-          <div className="variety chat">
+          {/* <div className="variety chat">
             <h2>Chat</h2>
             <p>
               <svg
@@ -109,7 +109,7 @@ const Home = ({ GetAllSelectedItems }) => {
             >
               View More
             </Link>
-          </div>
+          </div>  */}
         </div>
         <div className="our_content">
           <h2>Students insight</h2>

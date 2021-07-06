@@ -12,24 +12,26 @@ const NavBar = ({ auth: { user, isAuthenticated }, totalQuantity, Logout }) => {
             <Link to="/admin" className="link">
               Admin
             </Link>
-            <button className="link" onClick={() => Logout()}>
-              <i className="fa fa-sign-out"></i>Logout
-            </button>
+          
             <Link className="link" to="/orderplaced">
               Orders Placed
             </Link>
+            <button className="butta" onClick={() => Logout()}>
+             Logout
+            </button>
           </div>
         ) : (
           <div className="user_nav">
             <Link to="/history" className="link">
               History
             </Link>
-            <button className="link" onClick={() => Logout()}>
-              <i className="fas fa-sign-out"></i>Logout
-            </button>
             <Link to="/orders" className="link">
               <i className="fas fa-shopping-cart"> {totalQuantity}</i>
             </Link>
+            <button className="butta" onClick={() => Logout()}>
+             Logout
+            </button>
+            
           </div>
         )
       ) : (

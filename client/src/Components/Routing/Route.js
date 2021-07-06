@@ -16,9 +16,9 @@ const Routes = () => {
     <Router>
       <Fragment>
         <Switch>
-          <Route exact component={SignIn} path="/signin" />
-          <Route exact component={SignUp} path="/signup" />
           <PrivateRoute exact component={Home} path="/" />
+          <Route exact component={SignIn} path="/signin" />
+          <Route exact component={SignUp} path="/signup" />    
           <PrivateRoute exact component={Orders} path="/orders" />
           <PrivateRoute exact component={History} path="/history" />
           <PrivateRoute exact component={Payment} path="/payment" />

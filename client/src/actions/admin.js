@@ -58,7 +58,7 @@ export const DeleteItem = (id) => async (dispatch) => {
 
 export const getAdminOrders = () => async (dispatch) => {
   try {
-    const res = await axios.get('/admin/orderplaced');
+    const res = await axios.get('/orderplaced');
     dispatch({
       type: GET_ADMIN_ORDERS,
       payload: res.data,
@@ -70,7 +70,7 @@ export const getAdminOrders = () => async (dispatch) => {
 
 export const orderReady = (id) => async (dispatch) => {
   try {
-    await axios.put(`/admin/orderplaced/${id}`);
+    await axios.put(`/orderplaced/${id}`);
     dispatch({
       type: ORDER_READY,
       payload: id,

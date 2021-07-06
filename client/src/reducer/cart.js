@@ -21,6 +21,8 @@ export default function (state = initialState, action) {
         ...state,
         cartItems: addToCart(state.cartItems, payload),
         totalQuantity: state.totalQuantity + 1,
+        // name:'Utsav',
+        // branch:"CSE"
       };
     }
     case REMOVE_FROM_CART: {

@@ -24,7 +24,7 @@ export const removeFromCart = (item) => ({
 
 export const PostHistory = (formData) => async (dispatch) => {
   try {
-    const res = await axios.post('/admin/orders', formData);
+    const res = await axios.post('/orders', formData);
    // console.log(formData);
     dispatch({
       type: POST_HISTORY,
@@ -38,8 +38,8 @@ export const PostHistory = (formData) => async (dispatch) => {
 
 export const GetHistory = () => async (dispatch) => {
   try {
-    const res = await axios.get('/admin/userorder');
-
+    const res = await axios.get('/userorder');
+  console.log(res.data);
     dispatch({
       type: GET_HISTORY,
       payload: res.data,

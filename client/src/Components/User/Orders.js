@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+
+import { Link } from "react-router-dom";
 import {
   clearItemFromCart,
   removeFromCart,
@@ -8,7 +10,8 @@ import {
   PostHistory
 } from '../../actions/cart';
 import { getCartTotal } from '../../Utils/cart';
-import StripeButton from '../pAYMENT/payment';
+// import StripeButton from '../pAYMENT/payment';
+// import Payment from "./Payment";
 import NavBar from '../Navbar/Navbar';
 const Orders = ({
   auth: { user },
@@ -56,7 +59,7 @@ const Orders = ({
             <th>Increase</th>
             <th>Decrease</th>
             <th>Clear Cart</th>
-            <th>Order</th>
+            {/* <th>Order</th> */}
           </tr>
           {cart.map((cartItem) => {
             return (
@@ -86,14 +89,9 @@ const Orders = ({
                     x
                   </button>
                 </td>
-                <td>
-                  <button
-                    className="ord"
-                    onClick={() => PostHistory(cartItem)}
-                  >
-                    📱
-                  </button>
-                </td>
+                {/* <td>
+                 
+                </td> */}
               </tr>
             );
           })}
@@ -104,12 +102,19 @@ const Orders = ({
         <br />
       </div>
       <div>
-        {<h1 className="get_total">Total Price: {getCartTotal(cart)}</h1>}
+        {<h1 className="get_total">Total Price: {total}</h1>}
       </div>
 
       <div>
-        <StripeButton />
-
+        {/* <StripeButton /> */}
+        <button
+                    className="butta"
+                    onClick={() => {PostHistory({cart,username:user.name,branch:user.branch,totall:total});
+                    history.push('/payment');
+                    }}
+                  >
+                      Place Order
+                  </button>
         <br />
         <br />
       </div>

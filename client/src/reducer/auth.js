@@ -9,7 +9,7 @@ import {
 } from '../actions/types';
 
 const initialState = {
-  token: localStorage.getItem('token'),
+  token: localStorage.getItem('token') || "",
   isAuthenticated: false,
   loading: true,
   user: null,
@@ -47,6 +47,7 @@ export default function (state = initialState, action) {
       };
     }
     case (AUTH_ERROR, LOGIN_FAIL, REGISTER_FAIL, LOGOUT): {
+      // localStorage.removeItem('token');
       return {
         ...state,
         isAuthenticated: false,

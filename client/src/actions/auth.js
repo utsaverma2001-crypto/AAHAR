@@ -73,7 +73,9 @@ export const signin = (formData) => async (dispatch) => {
 };
 
 export const Logout = () => async (dispatch) => {
+ 
   dispatch({
     type: LOGOUT,
   });
+  localStorage.removeItem('token');
 };

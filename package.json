@@ -1,7 +1,7 @@
 {
   "name": "cl",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend is build using Express Js which is a NodeJs framework and MongoDB as database.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -24,6 +24,14 @@
     "mongoose": "^5.12.10",
     "multer": "^1.4.2",
     "multer-storage-cloudinary": "^4.0.0",
-    "nodemon": "^2.0.9"
-  }
+    "nodemon": "^2.0.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utsaverma2001-crypto/AAHAR.git"
+  },
+  "bugs": {
+    "url": "https://github.com/utsaverma2001-crypto/AAHAR/issues"
+  },
+  "homepage": "https://github.com/utsaverma2001-crypto/AAHAR#readme"
 }

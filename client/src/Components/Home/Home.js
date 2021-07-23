@@ -86,8 +86,8 @@ const Home = ({ GetAllSelectedItems }) => {
               View More
             </Link>
           </div>
-          {/* <div className="variety chat">
-            <h2>Chat</h2>
+          <div className="variety chat">
+            <h2>Any-Time</h2>
             <p>
               <svg
                 height="512"
@@ -109,7 +109,7 @@ const Home = ({ GetAllSelectedItems }) => {
             >
               View More
             </Link>
-          </div>  */}
+          </div> 
         </div>
         <div className="our_content">
           <h2>Students insight</h2>

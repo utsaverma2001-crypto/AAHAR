@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 
 const StripeButton = ({ price, history }) => {
   const publishableKey =
-    'pk_test_51HTtOGLAh83Cwg11JvbUvct463ayXzw7V6CfoA0uEpd5mFiBqTWv0udisLPVS07vrmmXuZuVRFDoFwgZ34jcqYWX00nxFiZCs6';
+    'pk_test_51JGDGCSHqQ86GvgMqWUVwMYhbME9FTYXiq8fQzTrGiO9bdblYsGfzj4JNoja6aMpMNOGt7EcYatO9CyVljOdNpno00oKsMWUH7';
 
   const onToken = (token) => {
     console.log(token);

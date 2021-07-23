@@ -238,8 +238,8 @@ button {
 
 .menu {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4%;
   text-align: center;
   padding: 7% 7%;
 }
@@ -352,7 +352,7 @@ button {
   background-size: cover;
 }
 
-/* .variety.chat {
+.variety.chat {
   background: linear-gradient(
       to right,
       rgba(1, 1, 1, 0.9),
@@ -361,7 +361,7 @@ button {
     url('https://i2.wp.com/www.vegrecipesofindia.com/wp-content/uploads/2011/11/sev-puri-recipe13-500x375.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-} */
+}
 
 .variety .button {
   margin-top: 8%;
@@ -425,12 +425,12 @@ button {
 }
 
 .admin_form {
-  background-color: white;
-  height: 950px;
-  margin: 0 170px;
+  background-color: rgb(235, 235, 235);
+  height: 60%;
+  margin: 0 22%;
   text-align: center;
   border-radius: 10px;
-  padding: 60px 0;
+  padding: 5% 0;
 }
 
 .admin_form h3 {
@@ -501,7 +501,7 @@ button {
 
 .food_menu {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 50px;
 }
 
@@ -510,6 +510,7 @@ button {
   box-shadow: 0 28px 30px rgba(112, 108, 97, 0.6),
     0px 10px 10px rgba(112, 108, 97, 0.7);
   border-radius: 15px;
+  background-color: #bfe7fa;
 }
 
 .food_item button {
@@ -557,7 +558,7 @@ button {
   padding-top: 30px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .food_menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

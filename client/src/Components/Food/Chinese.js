@@ -32,9 +32,9 @@ const Chinese = ({
               <div className="food_h1">
                 <h1>{foodname}</h1>
               </div>
-              <div className="navbar">
+              {/* <div className="navbar">
                 <NavBar />
-              </div>
+              </div> */}
             </div>
           </nav>
           <div className="menu">

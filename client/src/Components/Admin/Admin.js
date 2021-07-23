@@ -50,7 +50,7 @@ const Admin = ({ AddFood, admin }) => {
               <option value="breakfast">Breakfast</option>
               <option value="lunch">Lunch</option>
               <option value="dinner">Dinner</option>
-              {/* <option value="chat">Chat</option> */}
+              <option value="chat">Anytime</option>
             </select>
             <br />
             <label>Enter Name of food Item</label>

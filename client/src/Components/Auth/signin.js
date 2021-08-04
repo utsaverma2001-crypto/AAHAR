@@ -27,6 +27,8 @@ const SignIn = ({ signin, isAuthenticated }) => {
 
   return (
     <div>
+     <h1 class="mainh">ARE YOU HUNGRY ?</h1> 
+     <h1 class="mainh1">Don't Wait , Lets Start Ordering Food Now ! </h1> 
       <div className="signup">
         <div className="signup_card">
           <form className="signup_form" onSubmit={onSubmit}>
@@ -58,8 +60,15 @@ const SignIn = ({ signin, isAuthenticated }) => {
 
             <button type="submit">Submit</button>
             <h4 className="done">Don't have an account ?</h4>
-            <Link to="/signup">Create one</Link>
+            <Link to="/signup" className="link">Create one</Link>
           </form>
+        </div>
+      </div>
+      <div className="foot1">
+        <div className="icons">
+          <i className="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          <i className="fab fa-facebook fa-2x " aria-hidden="true"></i>
+          <i className="fab fa-twitter fa-2x " aria-hidden="true"></i>
         </div>
       </div>
     </div>

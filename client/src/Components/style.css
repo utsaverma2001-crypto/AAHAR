@@ -20,6 +20,7 @@
   padding:0.5% 1%;
   outline:none;
   border: none;
+  margin:1%;
 }
 .butta:hover{
   background-color: white;
@@ -43,17 +44,51 @@ button {
 }
 
 .signup {
-  background:url('https://betterme.world/articles/wp-content/uploads/2021/01/shutterstock_172259846-740x491.jpg');
-  background-size: cover;
   height: 100%;
-  padding: 10%;
+padding: 9.2%;
+  background-image: linear-gradient(to right, rgba(139, 135, 135, 0), rgb(3, 3, 3));
 }
 .signup_form h2 {
   padding: 4% 0;
 }
+.mainh{
+  position:absolute;
+  right:6%;
+  top:25%;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-display:unset ;
+  font-size:400%;
+  color:rgb(255, 255, 255);
+}
+
+.mainh1{
+  position:absolute;
+  right:7%;
+  top:39%;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size:160%;
+  color:rgb(255, 255, 255);
+
+}
+.foot1{
+ 
+  background-color: #111111;
+  height: 60px;
+  text-align: center;
+  font-size: 20px;
+  color: #929aab;
+}
+
+.foot1 i {
+  padding-top: 10px;
+}
+.foot1 i:hover {
+  color: #63686e;
+}
 
 .signup_form {
-  background-color: rgba(95, 89, 89,0.5);
+  /* background-color: rgba(122, 106, 106, 0.5); */
+  background-image:linear-gradient(to right,rgb(109, 109, 109) ,rgb(206, 202, 202));
   height: 75%;
   width:35%;
   text-align: center;
@@ -80,6 +115,8 @@ button {
 }
 .done{
   margin-top:5%;
+  font-size: 20px;
+  color: rgb(255, 254, 254);
 }
 .signup_form button {
   margin-top: 3%;
@@ -89,9 +126,10 @@ button {
   border-radius: 30px;
   border: none;
   background-color: #111111;
-  box-shadow: 0 28px 48px rgba(75, 10, 124, 0.4),
-    0px 10px 10px rgba(157, 101, 201, 0.4);
   color: white;
+}
+.link{
+  color:#fff;
 }
 
 .signup_form button:focus {
@@ -162,8 +200,8 @@ button {
   position: absolute;
 }
 .home-h{
-  background:url(https://backgroundcheckall.com/wp-content/uploads/2017/12/cafeteria-background-11.jpg);
-  background-size: cover;
+  background:url(https://i.pinimg.com/736x/a0/43/18/a04318dfc641c049ca4e6b0e312f3462.jpg);
+  background-size:auto;
 }
 .link {
   color: #000000;
@@ -180,7 +218,7 @@ button {
 .user_nav,
 .admin_nav {
   text-align: right;
-  padding-top: 40px;
+  padding-top: 23px;
   padding-right: 30px;
   color: rgb(0, 0, 0);
 }
@@ -188,18 +226,19 @@ button {
   text-align: center;
   /* padding-top: 1%;  */
   color:#02362f;
-  margin-top: 6%;
-  margin-bottom:9%;
+  margin-top: 6.5%;
+  margin-bottom:6%;
+
 }
 
 .content h1 {
   font-size: 400%;
-  font-family:sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   padding-top: 40px; 
 }
 .content h3 {
   font-size: 150%;
-  font-family:cursive;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   /* padding: 0.4% 0; */
 }
 
@@ -299,7 +338,7 @@ button {
   color: #63686e;
   -webkit-box-shadow: 10px 10px 25px 15px rgba(0, 0, 0, 0.27);
   box-shadow: 10px 10px 25px 15px rgba(0, 0, 0, 0.27);
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .variety:hover {
@@ -364,19 +403,19 @@ button {
 }
 
 .variety .button {
-  margin-top: 8%;
+  margin-top: 9%;
   border: none;
-  font-size: 18px;
-  padding: 3% 3%;
+  font-size: 15px;
+  padding:5% 7%;
   background: #ffffff;
   color: black;
-  border-radius: 32%;
+  border-radius: 12px;
   font-weight: bold;
   text-decoration: none;
 }
 .variety .button:hover{
   color:white;
-  background-color: #313131;
+  background-color: #585454;
 }
 .footer {
   background-color: #111111;
@@ -459,18 +498,20 @@ button {
   font-size: 18px;
   border-radius: 30px;
   border: none;
-  background-color: #111111;
+  background-color: #504d4d;
   box-shadow: 0 28px 48px rgba(75, 10, 124, 0.4),
     0px 10px 10px rgba(157, 101, 201, 0.4);
-  color: white;
+  color: rgb(200, 142, 255);
   font-weight: bold;
 }
-
+.cartD button:hover{
+background-color: rgb(255, 255, 255);
+color:black
+}
 .admin_form button:hover {
   box-shadow: 0 28px 28px rgba(75, 10, 124, 0.2),
     0px 10px 10px rgba(157, 101, 201, 0.2);
 }
-
 .admin_form button {
   outline: none;
 }
@@ -510,16 +551,18 @@ button {
   box-shadow: 0 28px 30px rgba(112, 108, 97, 0.6),
     0px 10px 10px rgba(112, 108, 97, 0.7);
   border-radius: 15px;
-  background-color: #bfe7fa;
+  background-color: #8fe5ff;
 }
-
+.empty{
+  margin-top: 7%;
+}
 .food_item button {
   margin: 20px 0;
   padding: 10px 40px;
   border-radius: 10px;
   font-size: 17px;
   border: none;
-  background: #111111;
+  background: #0c0c0c;
   box-shadow: 0 28px 48px rgba(75, 10, 124, 0.4),
     0px 10px 10px rgba(157, 101, 201, 0.4);
   color: #929aab;
@@ -762,7 +805,12 @@ button {
   padding: 20px;
   border-radius: 10px;
 }
-
+.Green{
+  color:#0af56c;
+}
+.Red{
+  color:#fa0505;
+}
 .order_box {
   background: white;
   padding: 25px;

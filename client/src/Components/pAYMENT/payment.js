@@ -10,7 +10,8 @@ const StripeButton = ({ price, history }) => {
   const onToken = (token) => {
     console.log(token);
     alert('Payment successful');
-    history.push('/payment');
+    //window.location;
+    history.push('/');
   };
 
   return (

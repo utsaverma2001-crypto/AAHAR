@@ -48,7 +48,7 @@ const Chinese = ({
 
                     {user ? (
                       user.name === 'admin' ? (
-                        <div className="admin_control_buttons">
+                        <div className="admin_control_buttons cartD">
                           <button
                             onClick={() => {
                               DeleteItem(item._id);
@@ -59,8 +59,9 @@ const Chinese = ({
                           </button>
                         </div>
                       ) : (
-                        <div>
-                          <button onClick={() => AddToCart(item)}>
+                        <div className="cartD">
+                          <button  onClick={() =>{ AddToCart(item);
+                          alert("Item is added to the Cart")}}>
                             Add to cart
                           </button>
                         </div>

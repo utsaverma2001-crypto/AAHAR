@@ -31,6 +31,8 @@ const SignUp = ({ signup, isAuthenticated }) => {
   return (
     <div>
       <div className="signup">
+      <h1 class="mainh">JOIN US</h1> 
+      <h1 class="mainh1">Order online from Canteen </h1> 
         <div className="signup_card">
           <form onSubmit={onSubmit} className="signup_form">
             <h2>Sign Up </h2>
@@ -78,6 +80,13 @@ const SignUp = ({ signup, isAuthenticated }) => {
             <br />
             <button type="submit">Submit</button>
           </form>
+        </div>
+      </div>
+      <div className="foot1">
+        <div className="icons">
+          <i className="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          <i className="fab fa-facebook fa-2x " aria-hidden="true"></i>
+          <i className="fab fa-twitter fa-2x " aria-hidden="true"></i>
         </div>
       </div>
     </div>

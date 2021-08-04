@@ -10,7 +10,7 @@ import {
   PostHistory
 } from '../../actions/cart';
 import { getCartTotal } from '../../Utils/cart';
-// import StripeButton from '../pAYMENT/payment';
+import StripeButton from '../pAYMENT/payment';
 // import Payment from "./Payment";
 import NavBar from '../Navbar/Navbar';
 const Orders = ({
@@ -23,6 +23,7 @@ const Orders = ({
 }) => {
   const total = getCartTotal(cart);
   const history = useHistory();
+  
   return (
     <div className="order">
       <div className="orders">
@@ -48,8 +49,10 @@ const Orders = ({
       ) : (
         ''
       )}
-
-      <div className="canteen_table">
+      {
+        cart.length==0 ? (<div className="empty">
+          <h1>Cart is Empty, Place Your Order First !</h1>
+        </div>):(<div>  <div className="canteen_table">
         <table>
           <tr className="title_table">
             <th>Food Item Type</th>
@@ -101,23 +104,33 @@ const Orders = ({
 
         <br />
       </div>
-      <div>
-        {<h1 className="get_total">Total Price: {total}</h1>}
-      </div>
+       <div>
+       {<h1 className="get_total">Total Price: {total}</h1>}
+     </div>
 
-      <div>
-        {/* <StripeButton /> */}
-        <button
-                    className="butta"
-                    onClick={() => {PostHistory({cart,username:user.name,branch:user.branch,totall:total});
-                    history.push('/payment');
-                    }}
-                  >
-                      Place Order
-                  </button>
-        <br />
-        <br />
-      </div>
+     <div>
+       <StripeButton />
+       <button
+                   className="butta"
+                   onClick={() => {PostHistory({cart,username:user.name,branch:user.branch,totall:total});
+                      alert("Your order is Placed");
+                     // history.push('/');
+                     window.location.reload();
+                    
+
+                   }}
+                 >
+                     Place Order
+                 </button>
+       <br />
+       <br />
+     </div>
+     </div>
+      
+      )
+      }
+    
+     
     </div>
   );
 };

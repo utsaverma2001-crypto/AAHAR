@@ -12,6 +12,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+.back{
+  background-color: rgb(255, 255, 255);
+  color:black;
+  width:50px;
+  height:40px;
+  margin-left:85%;
+  margin-top:3%;
+  padding: auto;
+  font-size: 30px;
+}
+.back:hover{
+ 
+  background-color: black;
+  color:white;
+}
+.two{
+  display: inline-flex;
+}
 .butta{
   background-color: black;
   color:white;

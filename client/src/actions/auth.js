@@ -9,7 +9,7 @@ import {
 } from './types';
 import axios from 'axios';
 import setAuthToken from '../Utils/setAuthToken';
-import { setAlert } from './alert';
+ import { setAlert } from './alert';
 
 export const loadUser = () => async (dispatch) => {
   if (localStorage.token) {
@@ -36,13 +36,13 @@ export const signup = (formData) => async (dispatch) => {
       type: SIGNUP,
       payload: res.data,
     });
-  
+
     dispatch(loadUser());
   } catch (error) {
     // const errors = error.response.data.errors;
     // console.log(error.response.data.errors);
     if (error) {
-     
+
       console.log(error);
     }
     dispatch({
@@ -73,7 +73,7 @@ export const signin = (formData) => async (dispatch) => {
 };
 
 export const Logout = () => async (dispatch) => {
- 
+
   dispatch({
     type: LOGOUT,
   });

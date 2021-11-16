@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import Moment from 'react-moment';
 import { connect } from 'react-redux';
+import {useHistory } from 'react-router-dom';
 import { GetHistory } from '../../actions/cart';
 import Spinner from '../Spinner/Spinner';
 const History = ({ auth: { user }, GetHistory, history: { history } }) => {
   useState(() => {
     GetHistory();
   }, [GetHistory]);
+  const historyy = useHistory();
   return (
     <div className="history">
       <div className="personal_data">
         {user ? (
           <div>
+              <button className="back" onClick={()=>{historyy.push('/')}}> <i className="fas fa-long-arrow-alt-left"></i></button>
             <h1>Orders</h1>
             <img
               src="https://www.buropropiedades.com/assets/agent/gravatar-f2fcbefa79b7e622df3128e40098e22b419ac04287ffc9dcb8725b8aeb7b6b0c.png"

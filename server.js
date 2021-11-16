@@ -9,7 +9,7 @@ const path = require('path');
 
 app.use(express.json({ extended: false }));
 const mongoose = require('mongoose');
-const db =process.env.MONGO_URL;
+const db =process.env.MONGODB_URI;
 mongoose.connect(db, {
       useNewUrlParser: true,
       useUnifiedTopology: true,

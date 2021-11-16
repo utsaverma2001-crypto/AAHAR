@@ -29,11 +29,13 @@ const Orders = ({
       <div className="orders">
         <div className="food_title">
           <div className="food_h1">
-            <h1>Orders</h1>
+            <h1 className="two">Orders</h1>
+            
           </div>
-          <div className="navbar">
+          <button className="back" onClick={()=>{history.push('/')}}> <i className="fas fa-long-arrow-alt-left"></i></button>
+          {/* <div className="navbar">
             <NavBar />
-          </div>
+          </div> */}
         </div>
       </div>
       {user ? (

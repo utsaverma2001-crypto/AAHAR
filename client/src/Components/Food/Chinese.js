@@ -35,6 +35,8 @@ const Chinese = ({
               {/* <div className="navbar">
                 <NavBar />
               </div> */}
+             
+              <button className="back" onClick={()=>{history.push('/')}}> <i className="fas fa-long-arrow-alt-left"></i></button>
             </div>
           </nav>
           <div className="menu">
